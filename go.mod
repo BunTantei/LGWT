@@ -1,3 +1,3 @@
-module github.com/WST-T/LGWT
+module github.com/IoTantei/LGWT
 
 go 1.24.4
