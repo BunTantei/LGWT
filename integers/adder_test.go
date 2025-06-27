@@ -2,7 +2,7 @@ package integers
 
 import "testing"
 
-func TestAdder(t *testing.T) {
+func TestAdd(t *testing.T) {
 	// Define the "table" of test cases.
 	// Each element in this slice is a struct representing one test case.
 	testCases := []struct {
