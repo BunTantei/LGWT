@@ -1,6 +1,8 @@
 package iteration
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestRepeat(t *testing.T) {
 	testCases := []struct {
@@ -28,5 +30,11 @@ func TestRepeat(t *testing.T) {
 				t.Errorf("Repeat(%s) = %s; want %s", tc.a, result, tc.expected)
 			}
 		})
+	}
+}
+
+func BenchmarkRepeat(b *testing.B) {
+	for b.Loop() {
+		Repeat("a")
 	}
 }
