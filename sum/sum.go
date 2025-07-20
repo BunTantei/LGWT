@@ -1,4 +1,4 @@
-// Package sum provides functions sum stuf
+// Package sum provides functions sum stuff
 package sum
 
 func Sum(numbers [5]int) int {
