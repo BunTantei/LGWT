@@ -16,15 +16,35 @@ func TestSum(t *testing.T) {
 			t.Errorf("got %d want %d given, %v", got, want, numbers)
 		}
 	})
+
+	t.Run("collection of 10 numbers", func(t *testing.T) {
+		got := Sum([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+		want := 55
+
+		if got != want {
+			t.Errorf("got %d want %d", got, want)
+		}
+	})
 }
 
 func TestSumAll(t *testing.T) {
-	got := SumAll([]int{1, 2}, []int{0, 9})
-	want := []int{3, 9}
+	t.Run("a sum of two collection", func(t *testing.T) {
+		got := SumAll([]int{1, 2}, []int{0, 9})
+		want := []int{3, 9}
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("got %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("got %v, want %v", got, want)
+		}
+	})
+
+	t.Run("a sum of three collection", func(t *testing.T) {
+		got := SumAll([]int{2, 2}, []int{3, 4}, []int{8, 8})
+		want := []int{4, 7, 16}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("got %v, want %v", got, want)
+		}
+	})
 }
 
 func TestSumAllTails(t *testing.T) {

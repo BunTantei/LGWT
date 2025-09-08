@@ -1,4 +1,4 @@
-// Learn about structs, methods and interfaces
+// Package structsmethodsinterfaces to learn about structs, methods and interfaces
 package structsmethodsinterfaces
 
 func Perimeter(width, height float64) float64 {
