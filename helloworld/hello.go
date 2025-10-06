@@ -1,4 +1,4 @@
-// Package helloworld provides functions for greeting people in different languages
+// Package helloworld provides functions for greeting people in different languages.
 package helloworld
 
 const (
