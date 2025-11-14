@@ -2,7 +2,7 @@ package structsmethodsinterfaces
 
 import "testing"
 
-func TestPerimerter(t *testing.T) {
+func TestPerimeter(t *testing.T) {
 	testCases := []struct {
 		name     string
 		a        float64
