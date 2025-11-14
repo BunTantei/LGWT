@@ -37,7 +37,6 @@ func TestPerimerter(t *testing.T) {
 			expected: -40.0,
 		},
 	}
-
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			result := Perimeter(tc.a, tc.b)
