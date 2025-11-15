@@ -64,7 +64,7 @@ func TestArea(t *testing.T) {
 			result := Area(tc.rectangle)
 
 			if result != tc.expected {
-				t.Errorf("Area(%v) = %v; want %v", tc.rectangle, result, tc.expected)
+				t.Errorf("Area(%g) = %g; want %g", tc.rectangle, result, tc.expected)
 			}
 		})
 	}
