@@ -1,14 +1,27 @@
 // Package pointers is everything to learn about pointers but also errors.
 package pointers
 
+import "fmt"
+
+type Bitcoin int
+
+type Stringer interface {
+	String() string
+}
+
+func (b Bitcoin) String() string {
+	return fmt.Sprintf("%d BTC", b)
+}
+
 type Wallet struct {
-	balance int
+	balance Bitcoin
 }
 
-func (w Wallet) Deposit(amount int) {
-
+func (w *Wallet) Deposit(amount Bitcoin) {
+	fmt.Printf("address of balance in Deposit is %p \n", &w.balance)
+	w.balance += amount
 }
 
-func (w Wallet) Balance() int {
+func (w *Wallet) Balance() Bitcoin {
 	return w.balance
 }
